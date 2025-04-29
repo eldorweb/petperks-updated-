@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react';
 import loginImg from '../assets/png/home/zbigimg.png'
 import Loader from '../components/loader';
-import { toast, ToastContainer } from 'react-toastify'
+// import { toast, ToastContainer } from 'react-toastify'
 import AOS from 'aos'
 import "aos/dist/aos.css";
+import { Link } from 'react-router';
 
 const LoginMain = () => {
-    const notify = () => toast.error('Wow so easy !', {
-        position: 'bottom-right',
-    });
+    // const notify = () => toast.error('Wow so easy !', {
+    //     position: 'bottom-right',
+    // });
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -65,9 +66,9 @@ const LoginMain = () => {
                         </form>
                         <div className="flex gap-[5px]">
                             <div className="rounded-[10px] px-[35px] py-[15px] border-[1px] text-[16px] font-[lufga500] uppercase hover:bg-[#000] hover:text-[#fff] cursor-pointer">Sign In</div>
-                            <div className="rounded-[10px] px-[35px] py-[15px] border-[1px] text-[16px] font-[lufga500] uppercase hover:bg-[#000] hover:text-[#fff] cursor-pointer">Register</div>
-                            <button className="cursor-pointer" onClick={notify}>click</button>
-                            <ToastContainer />
+                            <Link to={"/register"}><div className="rounded-[10px] px-[35px] py-[15px] border-[1px] text-[16px] font-[lufga500] uppercase hover:bg-[#000] hover:text-[#fff] cursor-pointer">Register</div></Link>
+                            {/* <button className="cursor-pointer" onClick={notify}>click</button>
+                            <ToastContainer /> */}
                         </div>
                     </div>
                 </div>
