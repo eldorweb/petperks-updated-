@@ -1,7 +1,23 @@
+import { useEffect, useState } from 'react';
 import regImg from '../assets/png/home/regImg.png'
+import Loader from '../components/loader';
 
 const RegisterMain = () => {
-    return (
+    const [isLoading, setIsLoading] = useState(true);
+        useEffect(()=>{
+            window.scrollTo(0, 0); 
+        },[])
+    
+        useEffect(() => {
+            const fakeDataFetch = () => {
+                setTimeout(() => {
+                    setIsLoading(false);
+                }, 1000);
+            }
+            fakeDataFetch();
+        }, [])
+        return (
+        isLoading ? <Loader /> :
         <div className="flex bg-linear-to-r from-#FFC7BB from-50% to-#FFEDE9 to-100%">
 
             <div className="flex flex-col w-[50%] bg-[#FFC7BB] pt-[60px] pl-[81px] relative">
