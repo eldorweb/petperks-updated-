@@ -32,7 +32,6 @@ const HomeHeader = () => {
         return (
         <HomeStyle>
             <div className="header">
-
                 <div className="forBgimg"  >
                     <div className="header_left" data-aos="fade-right">
                         <div className="vertical1">
@@ -62,7 +61,7 @@ const HomeHeader = () => {
                                         <img src={user2} alt="user" width='45px' />
                                         <img src={user3} alt="user" width='45px' />
                                         <img src={user4} alt="user" width='45px' />
-                                        <div>+6k</div>
+                                        <div>+6k</div> 
                                     </div>
                                 </div>
                             </div>

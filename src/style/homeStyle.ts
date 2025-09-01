@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const HomeStyle = styled.div`
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-right: auto;
     margin-left: auto;
     width: 100%; 
@@ -10,9 +11,21 @@ export const HomeStyle = styled.div`
     padding-right: 66px;
     padding-top: 40px;
     padding-bottom: 40px;
+    @media (width <=1800px){
+        padding-right: 0;
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+    }
     .header{
         .forBgimg{
             display: flex;
+            justify-content: space-between;
+                @media (width <=1800px){
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+    }
         }
         .header_left{
             display: flex;
@@ -20,6 +33,9 @@ export const HomeStyle = styled.div`
             align-items: center;
             justify-content: space-between;
             margin-right: 250px;
+                @media (width <=1800px){
+                    margin-right: 50px;
+    }
             .vertical1{
                 display: flex;
                 flex-direction: column;
